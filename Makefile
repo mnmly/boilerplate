@@ -11,7 +11,7 @@ components: component.json
 serve: install
 	@NODE_PATH=lib n use 0.11.11 --harmony server.js
 
-install:
+install: package.json
 	@npm install
 
 clean:
