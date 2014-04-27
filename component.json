@@ -1,0 +1,13 @@
+{
+  "name": "boilerplate",
+  "repo": "mnmly/boilerplate",
+  "description": "Boilerplate",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "paths": ["lib"],
+  "locals": ["boot"]
+}

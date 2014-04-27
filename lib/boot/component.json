@@ -1,0 +1,14 @@
+{
+  "name": "boot",
+  "dependencies": {
+    "component/emitter": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "styles":[
+    "boot.css"
+  ],
+  "locals": [],
+  "paths": []
+}
