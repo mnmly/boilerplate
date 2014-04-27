@@ -4,7 +4,7 @@
 
 ## Installation
 
-    $ git install mnmly/boilerplate && rm -rf .git
+    $ git install mnmly/boilerplate . && rm -rf .git
 
     # Run server
     $ make serve

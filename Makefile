@@ -8,8 +8,11 @@ build: components $(SRC) $(STYL) $(JSON)
 components: component.json
 	@component install --dev
 
-serve:
+serve: install
 	@NODE_PATH=lib n use 0.11.11 --harmony server.js
+
+install:
+	@npm install
 
 clean:
 	rm -fr build components
