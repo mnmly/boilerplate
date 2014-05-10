@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "koa-static": "~1.4.3",
     "koa-livereload": "~0.1.1",
@@ -8,6 +8,6 @@
     "koa-route": "~1.0.2",
     "debug": "~0.7.4",
     "mini-livereload": "git://github.com/mnmly/mini-livereload",
-    "mnml-build": "git://github.com/mnmly/mnml-build#0.1.2"
+    "mnml-build": "git://github.com/mnmly/mnml-build#0.1.3"
   }
 }
