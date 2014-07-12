@@ -4,28 +4,40 @@
 
 var fs = require('fs');
 var koa = require('koa');
+var co = require('co');
 var app = module.exports = koa();
 var port = process.env.PORT || 3000;
 var mini = require('mini-livereload')();
 var serve = require('koa-static');
+var mount = require('koa-mount');
 var route = require('koa-route');
-var build = require('mnml-build').middleware({dev: true});
+var mnmlBuild = require('mnml-build');
+var build = mnmlBuild.middleware({dev: true});
 var livereload = require('koa-livereload');
+var previewApp = require('instant-preview-server');
 
 
 if('development' === app.env){
+
   app.use(build);
   app.use(livereload());
   mini.listen(35729);
-
   app.use(serve(__dirname + '/lib'));
+
+  previewApp.on('preview', function(preview) {
+    var _build = mnmlBuild({ dev: true, preview: preview });
+    co(function *(){
+      yield _build;
+      mini.changed({body: {files: [preview.filename]}});
+    })();
+  });
 }
 
 /**
  * Expose some public dirs
  */
 
-app.use(serve(__dirname + '/build'));
+app.use(mount('/build', serve(__dirname + '/build')));
 app.use(serve(__dirname + '/public'));
 
 /**
