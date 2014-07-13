@@ -10,7 +10,7 @@
     "debug": "*",
     "mini-livereload": "git://github.com/mnmly/mini-livereload",
     "mnml-build": "git://github.com/mnmly/mnml-build#0.1.8",
-    "instant-preview-server": "git://github.com/mnmly/instant-preview-server#0.0.2",
+    "instant-preview-server": "git://github.com/mnmly/instant-preview-server#0.0.1",
     "co": "~3.0.6",
     "debounce": "~1.0.0"
   }
