@@ -6,6 +6,9 @@
 
     $ git install mnmly/boilerplate . && rm -rf .git
     
+    # In case you don't have it
+    $ npm install -g n
+    
     # Install dependencies
     $ make install
 
