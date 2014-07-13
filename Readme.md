@@ -17,7 +17,7 @@
 If you are using `MacVim` and installed [vim-instant-preview](https://github.com/mnmly/vim-instant-preview),
 you can go to `http://localhost:3000/?preview=true` to make it work.
 
-You can develop like following:
+You can write code like this:
 
 [![](http://c.mnmly.com/WY1x/developing-for-ideas.gif)](http://vimeo.com/100609288/)
 
