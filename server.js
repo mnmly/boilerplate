@@ -15,7 +15,7 @@ var mnmlBuild = require('mnml-build');
 var build = mnmlBuild.middleware({dev: true});
 var livereload = require('koa-livereload');
 var debounce = require('debounce');
-var previewApp = require('instant-preview-server');
+var PreviewServer = require('instant-preview-server');
 
 if('development' === app.env){
 
@@ -23,7 +23,9 @@ if('development' === app.env){
   app.use(livereload());
   mini.listen(35729);
   app.use(serve(__dirname + '/lib'));
-  
+  var previewApp = new PreviewServer();
+  previewApp.listen();
+
   previewApp.on('preview', debounce(function(preview) {
     var _build = mnmlBuild({ dev: true, preview: preview });
     co(function *(){
